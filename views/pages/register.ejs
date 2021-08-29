@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper d-flex align-items-center justify-content-center h-100">
+      <div class="card login-form">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            <img src="/images/logo.png" width="150" />
+          </h5>
+          <form id="formCadastro" action="#">
+            <label for="name" class="form-label">Nome</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nome completo"
+                aria-describedby="nameHelp" required />
+            </div>
+
+            <label for="email" class="form-label">E-mail</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+              <input type="email" class="form-control" id="email" name="email" placeholder="E-mail de usuário"
+                aria-describedby="emailHelp" required />
+            </div>
+            <label for="email" class="form-label">Senha</label>
+            <div class="mb-3">
+
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                <input type="password" class="form-control" id="password" name="password" placeholder="**********"
+                  required />
+              </div>
+
+              <label for="password" class="form-label">Confirmar Senha</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                <input type="password" class="form-control" id="password" placeholder="**********" required />
+              </div>
+              <button id="registerButton" type="submit" class="btn btn-primary w-100">
+                Cadastrar
+              </button>
+              
+              <div class="register-up mt-4">
+                Já tem uma conta? <a href="/">Entrar</a>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+   <%- include('../partials/footer'); %>
+   <script src="js/register.js"></script>
+</body>
+</html>

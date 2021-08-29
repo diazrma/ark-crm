@@ -1,8 +1,8 @@
 require("dotenv-safe").config();
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
-exports.generateToken = async (email) => {
-  return jwt.sign({ email: email}, process.env.SECRET, {
-    expiresIn: 86400
+exports.generateToken = async (name, email) => {
+  return jwt.sign({ name: name, email: email }, process.env.SECRET, {
+    expiresIn: 86400,
   });
-}
+};

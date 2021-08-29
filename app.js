@@ -16,11 +16,11 @@ app.use("/", express.static("public"), router);
 const userRoute = require('./app/routes/user-route');
 
 //Pages Routes
-const indexRoute = require('./routes/index-route');
-const registerRoute = require('./routes/register-route');
+const indexRoutePage = require('./routes/index-route');
+const userRoutePage = require('./routes/user-route');
 
-app.use('/',indexRoute);
-app.use('/',registerRoute);
+app.use('/',indexRoutePage);
+app.use('/',userRoutePage);
 app.use('/v1/user',userRoute);
 
 

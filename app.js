@@ -18,9 +18,11 @@ const userRoute = require('./app/routes/user-route');
 //Pages Routes
 const indexRoutePage = require('./routes/index-route');
 const userRoutePage = require('./routes/user-route');
+const dashboardRoutePage = require('./routes/dashboard-route');
 
 app.use('/',indexRoutePage);
 app.use('/',userRoutePage);
+app.use('/',dashboardRoutePage);
 app.use('/v1/user',userRoute);
 
 

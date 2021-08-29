@@ -10,5 +10,5 @@ router.post('/confirma-cadastro', controller.confirmregister);
 
 router.post('/login', controller.login);
 
-
+router.post('/recovery-password', controller.recoveryPassword);
 module.exports = router;

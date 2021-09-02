@@ -29,7 +29,8 @@ $("#formLogin").submit(function (event) {
       if (response.status == 200) {
         if ($("#remember").is(":checked")) {
           localStorage.setItem("token", response.token);
-        }
+         }
+       window.location.href=`/dashboard?token=${ localStorage.getItem('token')}`;
       } else {
         alertify.set("notifier", "position", "top-center");
         alertify.error(response.message);

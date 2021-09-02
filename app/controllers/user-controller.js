@@ -5,7 +5,7 @@ const templateRegister = require("../../templates/register");
 const templateRecoveryPassword = require("../../templates/recovery-password");
 const helperPassword = require("../helpers/password");
 const md5 = require("md5");
-const users = require("../models/users");
+
 
 exports.register = async (req, res, next) => {
   jwt = await auth.generateToken(req.body.name,req.body.email);
@@ -75,6 +75,9 @@ exports.login = async (req, res, next) => {
   });
 };
 
+exports.logout = async (req,res,next) =>{
+  res.json({  token: null });
+}
 exports.recoveryPassword = async (req, res, next) => {
   const newPassword = helperPassword.generatePassword(5);
   console.log(newPassword)

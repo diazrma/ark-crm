@@ -1,9 +1,9 @@
 <div class="app-header header-shadow">
     <div class="app-header__logo">
-        <div class="logo-src"></div> 
+        <div class="logo-src"></div>
         <div class="header__pane ml-auto">
             <div>
-              
+
             </div>
         </div>
     </div>
@@ -24,7 +24,8 @@
                 </span>
             </button>
         </span>
-    </div>    <div class="app-header__content">
+    </div>
+    <div class="app-header__content">
         <div class="app-header-left">
             <div class="search-wrapper">
                 <div class="input-holder">
@@ -40,14 +41,15 @@
                         Estatisticas
                     </a>
                 </li>
-         
+
                 <li class="dropdown nav-item">
                     <a href="javascript:void(0);" class="nav-link">
                         <i class="nav-link-icon fa fa-cog"></i>
                         Configurações
                     </a>
                 </li>
-            </ul>        </div>
+            </ul>
+        </div>
         <div class="app-header-right">
             <div class="header-btn-lg pr-0">
                 <div class="widget-content p-0">
@@ -58,7 +60,8 @@
                                     <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
                                     <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                 </a>
-                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                <div tabindex="-1" role="menu" aria-hidden="true"
+                                    class="dropdown-menu dropdown-menu-right">
                                     <button type="button" tabindex="0" class="dropdown-item">Minha Conta</button>
                                     <button type="button" tabindex="0" class="dropdown-item">Configurações</button>
                                     <button type="button" tabindex="0" class="dropdown-item">Notificações</button>
@@ -71,7 +74,7 @@
                             <div class="widget-heading">
                                 <% users.forEach(function(user) { %>
                                     <%= user.name %>
-                                <% }); %>
+                                        <% }); %>
                             </div>
                             <div class="widget-subheading">
                                 Conta Ativa
@@ -84,6 +87,8 @@
                         </div>
                     </div>
                 </div>
-            </div>        </div>
+            </div>
+        </div>
     </div>
-</div> 
+</div>
+<script src="js/authorize.js"></script>

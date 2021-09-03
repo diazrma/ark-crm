@@ -27,10 +27,11 @@ $("#formLogin").submit(function (event) {
     data: $(this).serialize(),
     success: function (response) {
       if (response.status == 200) {
-        if ($("#remember").is(":checked")) {
-          localStorage.setItem("token", response.token);
-         }
-       window.location.href=`/dashboard?token=${ localStorage.getItem('token')}`;
+        localStorage.setItem("token", response.token);
+        loading(1000);
+        setTimeout(() => {
+          window.location.href = `/dashboard`;
+        }, 1000);
       } else {
         alertify.set("notifier", "position", "top-center");
         alertify.error(response.message);

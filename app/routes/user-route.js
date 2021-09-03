@@ -14,4 +14,7 @@ router.post('/login', controller.login);
 router.post('/logout', controller.logout);
 
 router.post('/recovery-password', controller.recoveryPassword);
+
+router.post('/authorize',authService.authorize);
+
 module.exports = router;

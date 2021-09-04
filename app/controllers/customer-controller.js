@@ -1,7 +1,6 @@
 const { Customer } = require("../models");
 const csvtojson = require("csvtojson");
 
-
 exports.get = async  (req,res,next)=>{
    const customer = await Customer.findAll();
    res.send(customer)

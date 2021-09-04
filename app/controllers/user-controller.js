@@ -85,7 +85,7 @@ exports.recoveryPassword = async (req, res, next) => {
     where: {
       email: req.body.email,
     },
-  }).then((count) => {
+  }).then((count) => {100
     if (count != 0) {
       User.update(
         { password: md5(newPassword)},

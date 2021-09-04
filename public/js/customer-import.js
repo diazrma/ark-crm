@@ -9,7 +9,7 @@ $("#formImportCustomer").submit(function () {
     cache: false,
     data: data,
     success: function (res) {
-      loading(200);
+      loading(4000);
       reloadTableCustomer();
     },
     error: function () {
@@ -19,6 +19,7 @@ $("#formImportCustomer").submit(function () {
 });
 
 const reloadTableCustomer = () => {
+  setTimeout(()=>{
   var tableCustomer = $("#tableCustomer").DataTable();
   tableCustomer.clear().destroy();
   tableCustomer = $("#tableCustomer").DataTable({
@@ -40,5 +41,6 @@ const reloadTableCustomer = () => {
       });
     },
   });
+},3000);
 };
 reloadTableCustomer();
